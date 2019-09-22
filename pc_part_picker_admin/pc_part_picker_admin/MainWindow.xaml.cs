@@ -30,72 +30,75 @@ namespace pc_part_picker_admin
         }
 
         //Setting the second menu up and running after THIS button is toggled 
-        private void ToggleButton_Checked(object sender, RoutedEventArgs e)
+        private void BtnMenuMore_Checked(object sender, RoutedEventArgs e)
         {
-            btnChipset.Visibility = Visibility.Visible;
-            btnChipset.IsEnabled = true;
+            BtnMenuChipset.Visibility = Visibility.Visible;
+            BtnMenuChipset.IsEnabled = true;
 
-            btnCmos.Visibility = Visibility.Visible;
-            btnCmos.IsEnabled = true;
+            BtnMenuCmos.Visibility = Visibility.Visible;
+            BtnMenuCmos.IsEnabled = true;
 
-            btnManufacturer.Visibility = Visibility.Visible;
-            btnManufacturer.IsEnabled = true;
+            BtnMenuManufacturer.Visibility = Visibility.Visible;
+            BtnMenuManufacturer.IsEnabled = true;
 
-            btnMemType.Visibility = Visibility.Visible;
-            btnMemType.IsEnabled = true;
+            BtnMenuMemType.Visibility = Visibility.Visible;
+            BtnMenuMemType.IsEnabled = true;
 
-            btnSizeType.Visibility = Visibility.Visible;
-            btnSizeType.IsEnabled = true;
+            BtnMenuSizeType.Visibility = Visibility.Visible;
+            BtnMenuSizeType.IsEnabled = true;
 
-            btnSocket.Visibility = Visibility.Visible;
-            btnSocket.IsEnabled = true;
+            BtnMenuSocket.Visibility = Visibility.Visible;
+            BtnMenuSocket.IsEnabled = true;
 
-            btnStorageConn.Visibility = Visibility.Visible;
-            btnStorageConn.IsEnabled = true;
+            BtnMenuStorageConn.Visibility = Visibility.Visible;
+            BtnMenuStorageConn.IsEnabled = true;
 
-            btnStorageSize.Visibility = Visibility.Visible;
-            btnStorageSize.IsEnabled = true;
+            BtnMenuStorageSize.Visibility = Visibility.Visible;
+            BtnMenuStorageSize.IsEnabled = true;
 
-            btnStorageType.Visibility = Visibility.Visible;
-            btnStorageType.IsEnabled = true;
+            BtnMenuStorageType.Visibility = Visibility.Visible;
+            BtnMenuStorageType.IsEnabled = true;
 
-            btnVgaSlotType.Visibility = Visibility.Visible;
-            btnVgaSlotType.IsEnabled = true;
+            BtnMenuVgaSlotType.Visibility = Visibility.Visible;
+            BtnMenuVgaSlotType.IsEnabled = true;
 
 
         }
 
-        private void btnMore_Unchecked(object sender, RoutedEventArgs e)
+        private void BtnMenuMore_Unchecked(object sender, RoutedEventArgs e)
         {
-            btnChipset.Visibility = Visibility.Hidden;
-            btnChipset.IsEnabled = false;
+            BtnMenuChipset.Visibility = Visibility.Hidden;
+            BtnMenuChipset.IsEnabled = false;
 
-            btnCmos.Visibility = Visibility.Hidden;
-            btnCmos.IsEnabled = false;
+            BtnMenuCmos.Visibility = Visibility.Hidden;
+            BtnMenuCmos.IsEnabled = false;
 
-            btnManufacturer.Visibility = Visibility.Hidden;
-            btnManufacturer.IsEnabled = false;
+            BtnMenuManufacturer.Visibility = Visibility.Hidden;
+            BtnMenuManufacturer.IsEnabled = false;
 
-            btnMemType.Visibility = Visibility.Hidden;
-            btnMemType.IsEnabled = false;
+            BtnMenuMemType.Visibility = Visibility.Hidden;
+            BtnMenuMemType.IsEnabled = false;
 
-            btnSizeType.Visibility = Visibility.Hidden;
-            btnSizeType.IsEnabled = false;
+            BtnMenuSizeType.Visibility = Visibility.Hidden;
+            BtnMenuSizeType.IsEnabled = false;
 
-            btnSocket.Visibility = Visibility.Hidden;
-            btnSocket.IsEnabled = false;
+            BtnMenuSocket.Visibility = Visibility.Hidden;
+            BtnMenuSocket.IsEnabled = false;
 
-            btnStorageConn.Visibility = Visibility.Hidden;
-            btnStorageConn.IsEnabled = false;
+            BtnMenuStorageConn.Visibility = Visibility.Hidden;
+            BtnMenuStorageConn.IsEnabled = false;
 
-            btnStorageSize.Visibility = Visibility.Hidden;
-            btnStorageSize.IsEnabled = false;
+            BtnMenuStorageSize.Visibility = Visibility.Hidden;
+            BtnMenuStorageSize.IsEnabled = false;
 
-            btnStorageType.Visibility = Visibility.Hidden;
-            btnStorageType.IsEnabled = false;
+            BtnMenuStorageType.Visibility = Visibility.Hidden;
+            BtnMenuStorageType.IsEnabled = false;
 
-            btnVgaSlotType.Visibility = Visibility.Hidden;
-            btnVgaSlotType.IsEnabled = false;
+            BtnMenuVgaSlotType.Visibility = Visibility.Hidden;
+            BtnMenuVgaSlotType.IsEnabled = false;
         }
+
+
+       
     }
 }

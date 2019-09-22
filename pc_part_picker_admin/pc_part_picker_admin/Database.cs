@@ -10,6 +10,8 @@ namespace pc_part_picker_admin
 {
     class Database
     {
+
+        //As I might be using this software from different computers, I'll get the current pc's name every time.
         private readonly string machineName = Environment.MachineName;
 
         SqlConnection sqlConn;

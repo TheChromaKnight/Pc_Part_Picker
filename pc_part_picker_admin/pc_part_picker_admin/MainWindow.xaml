@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:pc_part_picker_admin"
         mc:Ignorable="d"
-        Title="Pc Builder Admin" Height="720" Width="1280">
+        Title="Pc Builder Admin" Height="720" Width="1280" MinWidth="1280" MinHeight="720">
 
 
     <Border Margin="0 0 0 0">
         <StackPanel Background="#FFF3B0B0" >
+            <!-- Upper menu-->
             <Grid>
 
                 <Grid.ColumnDefinitions>
@@ -26,14 +27,15 @@
 
                 </Grid.ColumnDefinitions>
 
-                <ToggleButton Grid.Column="0" Content="Motherboard" Name="btnMb" Background="#FF818181" BorderBrush="{x:Null}" Foreground="White"/>
-                <ToggleButton Grid.Column="1" Content="Cpu" Name="btnCpu" Background="#FF8E9091" BorderBrush="{x:Null}" Foreground="White"/>
-                <ToggleButton Grid.Column="2" Content="Memory" Name="btnMemory" Background="#FF69A9B8" BorderBrush="{x:Null}" Foreground="#FFFFFDFD"/>
-                <ToggleButton Grid.Column="3" Content="Vga" Name="btnVga" Grid.ColumnSpan="2" Background="#FF69A9B8" BorderBrush="{x:Null}" Foreground="#FFFFFBFB"/>
-                <ToggleButton Grid.Column="5" Content="Storage" Name="btnStorage" Background="#FFABEBF9" BorderBrush="{x:Null}"/>
-                <ToggleButton Grid.Column="6" Content="Case" Name="btnCase" Background="#FFABCEF9" BorderBrush="{x:Null}"/>
-                <ToggleButton Grid.Column="7" Content="Power supply" Name="btnPsu" Background="#FFF5F9AB" BorderBrush="{x:Null}"/>
-                <ToggleButton Grid.Column="8" Content="More.." Name="btnMore" Checked="ToggleButton_Checked" Unchecked="btnMore_Unchecked" Background="#FFABEBF9" BorderBrush="{x:Null}"/>
+
+                <Button Grid.Column="0" Content="Motherboard" Name="BtnMenuMb" BorderBrush="{x:Null}" Foreground="White" Background="#FFB8324B"/>
+                <Button Grid.Column="1" Content="Cpu" Name="BtnMenuCpu" Background="#FFE65771" BorderBrush="{x:Null}" Foreground="White"/>
+                <Button Grid.Column="2" Content="Memory" Name="BtnMenuMemory" Background="#FFE65771" BorderBrush="{x:Null}" Foreground="#FFFFFDFD"/>
+                <Button Grid.Column="3" Content="Vga" Name="BtnMenuVga" Grid.ColumnSpan="2" Background="#FFE65771" BorderBrush="{x:Null}" Foreground="#FFFFFBFB"/>
+                <Button Grid.Column="5" Content="Storage" Name="BtnMenuStorage" Background="#FFE65771" BorderBrush="{x:Null}" Foreground="White"/>
+                <Button Grid.Column="6" Content="Case" Name="BtnMenuCase" Background="#FFE65771" BorderBrush="{x:Null}" Foreground="White"/>
+                <Button Grid.Column="7" Content="Power supply" Name="BtnMenuPsu" Background="#FFE65771" BorderBrush="{x:Null}" Foreground="White"/>
+                <ToggleButton Grid.Column="8" Content="More.." Name="BtnMenuMore" Checked="BtnMenuMore_Checked" Unchecked="BtnMenuMore_Unchecked" Background="#FFE65771" BorderBrush="{x:Null}" Foreground="White"/>
 
 
 
@@ -42,6 +44,7 @@
 
             </Grid>
 
+            <!-- Lower menu-->
             <Grid Margin="0 2 0 0">
 
                 <Grid.ColumnDefinitions>
@@ -58,33 +61,295 @@
 
                 </Grid.ColumnDefinitions>
 
-                <ToggleButton Grid.Column="0" Content="Chipsets" Name="btnChipset" Visibility="Hidden" IsEnabled="False"/>
-                <ToggleButton Grid.Column="1" Content="Cmos" Name="btnCmos" Visibility="Hidden" IsEnabled="False" />
-                <ToggleButton Grid.Column="2" Content="Manufacturers" Name="btnManufacturer" Visibility="Hidden" IsEnabled="False" />
-                <ToggleButton Grid.Column="3" Content="Mem types" Name="btnMemType" Visibility="Hidden" IsEnabled="False"/>
-                <ToggleButton Grid.Column="4" Content="Size types" Name="btnSizeType" Visibility="Hidden" IsEnabled="False"/>
-                <ToggleButton Grid.Column="5" Content="Sockets" Name="btnSocket" Visibility="Hidden" IsEnabled="False"/>
-                <ToggleButton Grid.Column="6" Content="Storage conns" Name="btnStorageConn"  Visibility="Hidden" IsEnabled="False"/>
-                <ToggleButton Grid.Column="7" Content="Storage sizes" Name="btnStorageSize"  Visibility="Hidden" IsEnabled="False" />
-                <ToggleButton Grid.Column="8" Content="Storage types" Name="btnStorageType"  Visibility="Hidden" IsEnabled="False"/>
-                <ToggleButton Grid.Column="9" Content="Vga Slot types" Name="btnVgaSlotType" Visibility="Hidden" IsEnabled="False"/>
+                <Button Background="#FFF5F9AB" BorderBrush="{x:Null}" Grid.Column="0" Content="Chipsets" Name="BtnMenuChipset" Visibility="Hidden" IsEnabled="False"/>
+                <Button Background="#FFF5F9AB" BorderBrush="{x:Null}" Grid.Column="1" Content="Cmos" Name="BtnMenuCmos" Visibility="Hidden" IsEnabled="False" />
+                <Button Background="#FFF5F9AB" BorderBrush="{x:Null}" Grid.Column="2" Content="Manufacturers" Name="BtnMenuManufacturer" Visibility="Hidden" IsEnabled="False" />
+                <Button Background="#FFF5F9AB" BorderBrush="{x:Null}" Grid.Column="3" Content="Mem types" Name="BtnMenuMemType" Visibility="Hidden" IsEnabled="False"/>
+                <Button Background="#FFF5F9AB" BorderBrush="{x:Null}" Grid.Column="4" Content="Size types" Name="BtnMenuSizeType" Visibility="Hidden" IsEnabled="False"/>
+                <Button Background="#FFF5F9AB" BorderBrush="{x:Null}" Grid.Column="5" Content="Sockets" Name="BtnMenuSocket" Visibility="Hidden" IsEnabled="False"/>
+                <Button Background="#FFF5F9AB" BorderBrush="{x:Null}" Grid.Column="6" Content="Storage conns" Name="BtnMenuStorageConn"  Visibility="Hidden" IsEnabled="False"/>
+                <Button Background="#FFF5F9AB" BorderBrush="{x:Null}" Grid.Column="7" Content="Storage sizes" Name="BtnMenuStorageSize"  Visibility="Hidden" IsEnabled="False" />
+                <Button Background="#FFF5F9AB" BorderBrush="{x:Null}" Grid.Column="8" Content="Storage types" Name="BtnMenuStorageType"  Visibility="Hidden" IsEnabled="False"/>
+                <Button Background="#FFF5F9AB" BorderBrush="{x:Null}" Grid.Column="9" Content="Vga Slot types" Name="BtnMenuVgaSlotType" Visibility="Hidden" IsEnabled="False"/>
 
 
             </Grid>
 
-
+            <!-- Welcoming message-->
             <Grid>
 
                 <Grid.ColumnDefinitions>
 
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="6*"/>
+                    <ColumnDefinition Width="4*"/>
 
 
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Text="Welcome to my humble app!" Grid.Column="0" Height="70" FontWeight="Bold" FontSize="36"/>
+                <TextBlock Text="Welcome to my humble app!" Grid.Column="1" Height="70" FontWeight="Bold" FontSize="36" FontFamily="Open Sans Semibold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
             </Grid>
+
+            <!-- Row 1-->
+            <Border Margin="50 20 50 0 ">
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+
+                        <!-- TextBlock-->
+                        <ColumnDefinition Width="110"/>
+                        <!-- TextBox-->
+                        <ColumnDefinition Width="*"/>
+                        <!-- Measurements-->
+                        <ColumnDefinition Width="50"/>
+                        <!-- White Space-->
+                        <ColumnDefinition Width="*"/>
+                        <!-- Long TextBlock-->
+                        <ColumnDefinition Width="160"/>
+                        <!-- TextBox-->
+                        <ColumnDefinition Width="*"/>
+                        <!-- Measurement-->
+                        <ColumnDefinition Width="50"/>
+
+
+
+                    </Grid.ColumnDefinitions>
+
+
+                    <TextBlock  Text="Cpu Name:" Name="TblCpuName" Grid.Column="0" FontFamily="Open Sans Semibold" FontSize="18" TextDecorations="{x:Null}"/>
+                    <TextBox Margin ="0 0 0 25" Name="TbCpuName" Grid.Column="1" Padding="5px" FontFamily="Open Sans Semibold" FontSize="14"/>
+
+                    <TextBlock Text="Base Frequency:" Name="TblCpuBaseFreq" Grid.Column="4" FontFamily="Open Sans Semibold" FontSize="18"/>
+                    <TextBox Margin ="0 0 0 25"  Name="TbCpuBaseFreq" Grid.Column="5" Padding="5px"/>
+                    <TextBlock Margin="10 5 0 0" Text="Mhz" Name="TblCpuBaseFreqMeasure" Grid.Column="6" FontFamily="Open Sans Semibold" FontSize="14"/>
+
+                </Grid>
+
+            </Border>
+
+            <!-- Row 2-->
+            <Border Margin="50 20 50 0 ">
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+
+                        <!-- TextBlock-->
+                        <ColumnDefinition Width="110"/>
+                        <!-- TextBox-->
+                        <ColumnDefinition Width="*"/>
+                        <!-- Measurements-->
+                        <ColumnDefinition Width="50"/>
+                        <!-- White Space-->
+                        <ColumnDefinition Width="*"/>
+                        <!-- Long TextBlock-->
+                        <ColumnDefinition Width="160"/>
+                        <!-- TextBox-->
+                        <ColumnDefinition Width="*"/>
+                        <!-- Measurement-->
+                        <ColumnDefinition Width="50"/>
+
+
+                    </Grid.ColumnDefinitions>
+
+
+                    <TextBlock  Text="L2 Cache:" Name="TblCpuL2Cache" Grid.Column="0" FontFamily="Open Sans Semibold" FontSize="18" TextDecorations="{x:Null}"/>
+                    <TextBox Margin ="0 0 0 25" Name="TbCpuL2Cache" Grid.Column="1" Padding="5px" FontFamily="Open Sans Semibold" FontSize="14"/>
+                    <TextBlock Margin="10 5 0 0" Text="Mb" Name="TblCpuL2CacheMeasure" Grid.Column="2" FontFamily="Open Sans Semibold" FontSize="14"/>
+
+                    <TextBlock Text="Turbo Frequency:" Name="TblCpuTurboFreq" Grid.Column="4" FontFamily="Open Sans Semibold" FontSize="18"/>
+                    <TextBox Margin ="0 0 0 25"  Name="TbCpuTurboFreq" Grid.Column="5" Padding="5px"/>
+                    <TextBlock Margin="10 5 0 0" Text="Mhz" Name="TblCpuTurboFreqMeasure" Grid.Column="6" FontFamily="Open Sans Semibold" FontSize="14"/>
+
+                </Grid>
+
+            </Border>
+
+            <!-- Row 3-->
+            <Border Margin="50 20 50 0 ">
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+
+                        <!-- TextBlock-->
+                        <ColumnDefinition Width="110"/>
+                        <!-- TextBox-->
+                        <ColumnDefinition Width="*"/>
+                        <!-- Measurements-->
+                        <ColumnDefinition Width="50"/>
+                        <!-- White Space-->
+                        <ColumnDefinition Width="*"/>
+                        <!-- Long TextBlock-->
+                        <ColumnDefinition Width="160"/>
+                        <!-- TextBox-->
+                        <ColumnDefinition Width="*"/>
+                        <!-- Measurement-->
+                        <ColumnDefinition Width="50"/>
+
+
+                    </Grid.ColumnDefinitions>
+
+
+                    <TextBlock  Text="L3 Cache:" Name="TblCpuL3Cache" Grid.Column="0" FontFamily="Open Sans Semibold" FontSize="18" TextDecorations="{x:Null}"/>
+                    <TextBox Margin ="0 0 0 25" Name="TbCpuL3Cache" Grid.Column="1" Padding="5px" FontFamily="Open Sans Semibold" FontSize="14"/>
+                    <TextBlock Margin="10 5 0 0" Text="Mb" Name="TblCpuL3CacheMeasure" Grid.Column="2" FontFamily="Open Sans Semibold" FontSize="14"/>
+
+                    <TextBlock Text="Integrated Vga:" Name="TblCpuIntegrVga" Grid.Column="4" FontFamily="Open Sans Semibold" FontSize="18"/>
+                    <CheckBox  Margin ="0 0 0 25"  Name="ChbCpuIntegrVga" Grid.Column="5" Padding="5px" RenderTransformOrigin="0.5,0.5">
+                        <CheckBox.LayoutTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleY="2" ScaleX="2"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </CheckBox.LayoutTransform>
+                    </CheckBox>
+
+                </Grid>
+
+            </Border>
+
+            <!-- Row 4-->
+            <Border Margin="50 20 50 0 ">
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+
+                        <!-- TextBlock-->
+                        <ColumnDefinition Width="110"/>
+                        <!-- TextBox-->
+                        <ColumnDefinition Width="*"/>
+                        <!-- Measurements-->
+                        <ColumnDefinition Width="50"/>
+                        <!-- White Space-->
+                        <ColumnDefinition Width="*"/>
+                        <!-- Long TextBlock-->
+                        <ColumnDefinition Width="160"/>
+                        <!-- TextBox-->
+                        <ColumnDefinition Width="*"/>
+                        <!-- Measurement-->
+                        <ColumnDefinition Width="50"/>
+
+
+                    </Grid.ColumnDefinitions>
+
+
+                    <TextBlock  Text="Core Count:" Name="TblCpuCore" Grid.Column="0" FontFamily="Open Sans Semibold" FontSize="18" TextDecorations="{x:Null}"/>
+                    <TextBox Margin ="0 0 0 25" Name="TbCpuCore" Grid.Column="1" Padding="5px" FontFamily="Open Sans Semibold" FontSize="14"/>
+
+                    <TextBlock Text="Thread Count:" Name="TblCpuThread" Grid.Column="4" FontFamily="Open Sans Semibold" FontSize="18"/>
+                    <TextBox Margin ="0 0 0 25"  Name="TbCpuThread" Grid.Column="5" Padding="5px"/>
+
+
+
+                </Grid>
+
+            </Border>
+
+            <!-- Row 5-->
+            <Border Margin="50 20 50 0 ">
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+
+                        <!-- TextBlock-->
+                        <ColumnDefinition Width="110"/>
+                        <!-- TextBox-->
+                        <ColumnDefinition Width="*"/>
+                        <!-- Measurements-->
+                        <ColumnDefinition Width="50"/>
+                        <!-- White Space-->
+                        <ColumnDefinition Width="*"/>
+                        <!-- Long TextBlock-->
+                        <ColumnDefinition Width="160"/>
+                        <!-- TextBox-->
+                        <ColumnDefinition Width="*"/>
+                        <!-- Measurement-->
+                        <ColumnDefinition Width="50"/>
+
+                    </Grid.ColumnDefinitions>
+
+
+                    <TextBlock  Text="Cpu Cmos:" Name="TblCpuCmos" Grid.Column="0" FontFamily="Open Sans Semibold" FontSize="18" TextDecorations="{x:Null}"/>
+                    <ComboBox Margin ="0 0 0 25" Name="CbCpuCmos" Grid.Column="1" Padding="5px" FontFamily="Open Sans Semibold" FontSize="14"/>
+
+                    <TextBlock Text="Cpu Socket:" Name="TblCpuSocket" Grid.Column="4" FontFamily="Open Sans Semibold" FontSize="18"/>
+                    <ComboBox Margin ="0 0 0 25"  Name="CbCpuSocket" Grid.Column="5" Padding="5px"/>
+
+
+
+                </Grid>
+
+            </Border>
+
+
+            <!-- Row 6-->
+            <Border Margin="50 20 50 0 ">
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+
+                        <!-- TextBlock-->
+                        <ColumnDefinition Width="110"/>
+                        <!-- TextBox-->
+                        <ColumnDefinition Width="*"/>
+                        <!-- Measurements-->
+                        <ColumnDefinition Width="50"/>
+                        <!-- White Space-->
+                        <ColumnDefinition Width="*"/>
+                        <!-- Long TextBlock-->
+                        <ColumnDefinition Width="160"/>
+                        <!-- TextBox-->
+                        <ColumnDefinition Width="*"/>
+                        <!-- Measurement-->
+                        <ColumnDefinition Width="50"/>
+
+
+                    </Grid.ColumnDefinitions>
+
+
+                    <TextBlock  Text="Cpu Tdp :" Name="TblCpuTdp" Grid.Column="0" FontFamily="Open Sans Semibold" FontSize="18" TextDecorations="{x:Null}"/>
+                    <TextBox Margin ="0 0 0 25" Name="TbCpuTdp" Grid.Column="1" Padding="5px" FontFamily="Open Sans Semibold" FontSize="14"/>
+                    <TextBlock Margin="10 5 0 0" Text="Watt" Name="TblCpuTdpMeasure" Grid.Column="2" FontFamily="Open Sans Semibold" FontSize="14"/>
+
+                    <TextBlock Text="Msrp:" Name="TblCpuMsrp" Grid.Column="4" FontFamily="Open Sans Semibold" FontSize="18"/>
+                    <TextBox Margin ="0 0 0 25"  Name="TbCpuMsrp" Grid.Column="5" Padding="5px"/>
+                    <TextBlock Margin="10 5 0 0" Text="(€)" Name="TblCpuMsrpMeasure" Grid.Column="6" FontFamily="Open Sans Semibold" FontSize="14"/>
+
+
+                </Grid>
+
+            </Border>
+
+            <!-- Row 7/Buttons-->
+
+            <Border Margin="0 33 0 0">
+
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+
+
+                    </Grid.ColumnDefinitions>
+
+                    <Button Margin="0 0 10 0" Padding="6px" Name="BtnUpload" Content="Upload" Grid.Column="1" FontSize="18" FontFamily="Open Sans Semibold" Background="#FF63EA5D"/>
+                    <Button Padding="6px" Name="BtnUpdate" Content="Update" Grid.Column="2" FontFamily="Open Sans Semibold" FontSize="18" Background="#FFE65771"/>
+
+
+
+                </Grid>
+
+
+            </Border>
+
+
+
 
 
         </StackPanel>
