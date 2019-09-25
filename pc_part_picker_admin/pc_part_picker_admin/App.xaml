@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:pc_part_picker_admin"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
+        
+        
     </Application.Resources>
 </Application>
